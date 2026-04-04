@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: caller
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NEXT_PUBLIC_STUN_URL
+        value: stun:stun.l.google.com:19302
+      - key: NODE_ENV
+        value: production
