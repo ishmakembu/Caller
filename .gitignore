@@ -3,3 +3,9 @@ node_modules
 .pnpm-store
 *.log
 .DS_Store
+apps/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+render_check.sh
+render_services.sh
+render_workspaces.sh
