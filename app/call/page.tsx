@@ -87,17 +87,6 @@ export default function CallPage() {
     
     peerConnectionRef.current = peer
     
-    connection.createOffer()
-      .then((offer) => connection.setLocalDescription(offer))
-      .then(() => {
-        if (socketRef.current && connection.localDescription) {
-          socketRef.current.emit('signal:offer', {
-            targetSocketId: peerId,
-            offer: connection.localDescription,
-          })
-        }
-      })
-
     return peer
   }, [])
 
